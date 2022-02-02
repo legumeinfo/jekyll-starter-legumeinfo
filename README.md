@@ -3,7 +3,7 @@ This repository is an example of how a static website can built with [Jekyll](ht
 
 To clone this repo:
 
-    git clone --recurse-submodules https://github.com/legumeinfo/jekyll-legumeinfo.git
+    git clone --recurse-submodules https://github.com/legumeinfo/jekyll-starter-legumeinfo.git
 
 
 ## Running the Site
