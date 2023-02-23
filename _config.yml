@@ -38,6 +38,9 @@ theme: jekyll-theme-legumeinfo
 plugins:
   - jekyll-feed
 
+# enable post from the future so the theme can show upcoming events
+future: true
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
