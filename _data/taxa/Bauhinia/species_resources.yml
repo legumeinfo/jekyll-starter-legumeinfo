@@ -1,58 +1,52 @@
---- 
-- taxa: 
-  - name: Bauhinia blakeana
-    display_name: orchid tree
-    image_name: 
-    about: "A genus of trees in the Cercidoideae subfamily of legumes. Bauhinia species have large, attractive flowers, and are used in ornamental settings. Several species are referred to as orchid trees."
-    resources: 
-    - name: "Genomic data"
-      accessions:
-        - name: XX
-          description: XX
-          versions: 
-            - name: gnm1
-              instances:
-                - name: "Download from Data Store"
-                  URL: "https://legumeinfo.org/data/v2/Bauhinia/blakeana"
-  - name: Bauhinia purpurea
-    display_name: orchid tree or purple bauhinia
-    image_name: 
-    about: "A genus of trees in the Cercidoideae subfamily of legumes. Bauhinia species have large, attractive flowers, and are used in ornamental settings. Several species are referred to as orchid trees."
-    resources: 
-    - name: "Genomic data"
-      accessions:
-        - name: XX
-          description: XX
-          versions: 
-            - name: gnm1
-              instances:
-                - name: "Download from Data Store"
-                  URL: "https://legumeinfo.org/data/v2/Bauhinia/purpurea"
-  - name: Bauhinia tomentosa
-    display_name: yellow bell orchid tree or yellow bauhinia
-    image_name: 
-    about: "A genus of trees in the Cercidoideae subfamily of legumes. Bauhinia species have large, attractive flowers, and are used in ornamental settings. Several species are referred to as orchid trees."
-    resources: 
-    - name: "Genomic data"
-      accessions:
-        - name: XX
-          description: XX
-          versions: 
-            - name: gnm1
-              instances:
-                - name: "Download from Data Store"
-                  URL: "https://legumeinfo.org/data/v2/Bauhinia/tomentosa"
-  - name: Bauhinia variegata
-    display_name: orchid tree or mountain ebony
-    image_name: 
-    about: "A genus of trees in the Cercidoideae subfamily of legumes. Bauhinia species have large, attractive flowers, and are used in ornamental settings. Several species are referred to as orchid trees."
-    resources: 
-    - name: "Genomic data"
-      accessions:
-        - name: XX
-          description: XX
-          versions: 
-            - name: gnm1
-              instances:
-                - name: "Download from Data Store"
-                  URL: "https://legumeinfo.org/data/v2/Bauhinia/variegata"
+---
+species:
+- abbrev: baubl
+  commonName: Hong Kong orchidtree
+  description: A sterile hybrid between Bauhinia variegata and Bauhinia purpurea,
+    originating in Hong Kong in 1880. It is thought that all cultivated trees derive
+    from grafts starting from one cultivated at the Hong Kong Botanical Gardens.
+  genus: Bauhinia
+  resources: null
+  species: blakeana
+  strains:
+  - accession: HK1
+    identifier: HK1
+    name: HK1
+  taxid: 180222
+- abbrev: baupu
+  commonName: camel's foot tree
+  description: Bauhinia purpurea is a small deciduous tree native to the Indian subcontinent
+    and Myanmar. Some parts of the plant are edible and it has various medicinal uses.
+  genus: Bauhinia
+  resources: null
+  species: purpurea
+  strains:
+  - accession: HK2
+    identifier: HK2
+    name: HK2
+  taxid: 3806
+- abbrev: bauto
+  commonName: St. Thomas-tree, bell bauhinia, yellow bauhinia
+  description: A small tree found in Tropical and Southern Africa as well as the Indian
+    subcontinent.
+  genus: Bauhinia
+  resources: null
+  species: tomentosa
+  strains:
+  - accession: HK3
+    identifier: HK3
+    name: HK3
+  taxid: 204518
+- abbrev: bauva
+  commonName: mountain ebony, orchid tree
+  description: A small deciduous tree native to an area from China through Southeast
+    Asia to the Indian subcontinent. Edible buds are widely used as an ingredient
+    in many subcontinent recipes.
+  genus: Bauhinia
+  resources: null
+  species: variegata
+  strains:
+  - accession: HK4
+    identifier: HK4
+    name: HK4
+  taxid: 167791
