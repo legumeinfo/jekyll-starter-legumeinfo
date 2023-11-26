@@ -1,0 +1,9 @@
+---
+species:
+- name: canadensis
+  genomes:
+    - collection: ISC453364.gnm3.GWXB
+      synopsis: "Cercis canadensis accession ISC453364, genome assembly v3"
+  annotations:
+    - collection: ISC453364.gnm3.ann1.3N1M
+      synopsis: "Annotation 1 for Cercis canadensis accession ISC453364, genome assembly v3"

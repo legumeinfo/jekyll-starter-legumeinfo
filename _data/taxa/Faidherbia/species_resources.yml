@@ -1,16 +1,19 @@
---- 
-- taxa: 
-  - name: Faidherbia albida
-    display_name: "Apple-ring Acacia"
-    image_name: 
-    about: "A tree in the Caesalpinioideae legume subfamily, formerly included in the large Acacia genus as as Acacia albida. The species is native to Africa and the Middle East. The tree fixes nitrogen, and is an important fodder crop for livestock and various browsers and grazers."
-    resources: 
-    - name: "Genome browsers and genomic data"
-      accessions:
-        - name: XX
-          description: XX
-          versions: 
-            - name: gnm1
-              instances:
-                - name: "Download from Data Store"
-                  URL: "https://legumeinfo.org/data/v2/Faidherbia/albida/"
+---
+species:
+- abbrev: faial
+  commonName: apple-ring acacia
+  description: "Faidherbia albida, or apple-ring acacia, is a thorny tree growing\
+    \ up 6\u201330 m (20\u201398 ft) tall and 2 m (6.6 ft) in trunk diameter. Its\
+    \ deep-penetrating tap root makes it highly resistant to drought. The bark is\
+    \ grey, and fissured when old. There are 11,000 seeds/kg."
+  genus: Faidherbia
+  species: albida
+  strains:
+  - accession: WAFC
+    description: Faidherbia albida WAFC was sequenced and reported in Chang, et al.
+      DOI:10.1093/gigascience/giy152
+    identifier: WAFC
+    name: WAFC
+    origin: World AgroForestry Center, Kenya
+    resources: []
+  taxid: 138055
