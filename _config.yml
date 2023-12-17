@@ -35,11 +35,16 @@ datastoreurl: https://data.legumeinfo.org
 
 # Build settings
 theme: jekyll-theme-legumeinfo
-plugins:
-  - jekyll-feed
 
 # enable post from the future so the theme can show upcoming events
 future: true
+
+# cause jekyll build to fail on syntax error in YAML front matter
+strict_front_matter: true
+
+liquid:
+  error_mode: strict
+  strict_filters: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

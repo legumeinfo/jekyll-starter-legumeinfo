@@ -1,15 +1,11 @@
 services:
   jekyll:
-    image: jekyll/jekyll:4.2.0
+    image: bretfisher/jekyll-serve:latest
     volumes:
-      - ./:/srv/jekyll
+      - ./:/site
       - bundle-cache:/usr/local/bundle
-      - gem-cache:/usr/gem
-## for Windows hosts
-    environment:
-      VERBOSE: 1
-#     FORCE_POLLING: 1
-    command: jekyll serve --incremental --livereload
+      - gem-cache:/root/.local/share/gem
+    command: bundle exec jekyll serve --incremental --livereload --profile --trace --host 0.0.0.0
     ports:
       - "4000:4000"
       - "35729:35729"
