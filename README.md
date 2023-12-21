@@ -19,9 +19,13 @@ You can run the site with Ruby as follows:
     bundle exec jekyll serve
 
 ### Docker
-You can run the site with Docker as follows:
+You can build and serve the site with Docker as follows:
 
-    docker-compose up -d
+    docker compose up -d
+
+Or to build the site only (with the resulting site saved in a `_site` directory in the root of the git working tree)
+
+    docker compose run build
 
 ## Theme
 This Jekyll site uses the [Legume Information System Jekyll theme](https://github.com/legumeinfo/jekyll-theme-legumeinfo).
