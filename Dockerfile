@@ -9,3 +9,5 @@ COPY Gemfile* .
 RUN bundle install
 
 ENTRYPOINT ["bundle", "exec", "jekyll", "serve"]
+
+EXPOSE 4000
