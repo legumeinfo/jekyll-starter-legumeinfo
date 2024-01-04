@@ -1,7 +1,7 @@
 services:
   serve:
     build: .
-    entrypoint: bundle exec jekyll serve --incremental --livereload --profile --trace --host 0.0.0.0
+    command: --incremental --livereload --profile --trace --host 0.0.0.0
     volumes:
       - ./:/app
     ports:
