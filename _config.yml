@@ -30,6 +30,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: legumefed
 github_username: legumeinfo
 newsletter: http://eepurl.com/cX_JjL
+graphql_uri: https://graphql.lis.ncgr.org/
 
 # Build settings
 theme: jekyll-theme-legumeinfo
