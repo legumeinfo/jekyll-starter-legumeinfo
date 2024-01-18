@@ -1,19 +1,4 @@
 ---
-layout: default
+layout: tools
 title: Tools
 ---
-<h1>Tools</h1>
-
-{% if site.data.tools %}
-{% assign groups = site.data.tools | group_by: "category" | sort: "name" %}
-{% for group in groups %}
-  <dl>
-    <th>
-      <dt> {{ group.name }} </dt>
-      {% for item in group.items %}
-        <dd><a href="{{ item.url }}">{{ item.name }}</a>: {{ item.description }}</dd>
-      {% endfor %}
-    </th>
-  </dl>
-{% endfor %}
-{% endif %}
