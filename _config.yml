@@ -30,8 +30,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: legumefed
 github_username: legumeinfo
 newsletter: http://eepurl.com/cX_JjL
-# Set the LIS Datastore base URL here
-datastoreurl: https://data.legumeinfo.org
 
 # Build settings
 theme: jekyll-theme-legumeinfo
