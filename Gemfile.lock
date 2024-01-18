@@ -2,9 +2,8 @@ PATH
   remote: _themes/jekyll-theme-legumeinfo
   specs:
     jekyll-theme-legumeinfo (0.0.0)
-      jekyll (~> 4.2)
+      jekyll (>= 3.5, < 5.0)
       jekyll-datapage-generator (~> 1.4.0)
-      webrick (~> 1.7)
 
 GEM
   remote: https://rubygems.org/
