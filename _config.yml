@@ -35,6 +35,9 @@ graphql_uri: https://graphql.lis.ncgr.org/
 # Build settings
 theme: jekyll-theme-legumeinfo
 
+# LIS Web Components
+web_components_version: 1.4.0
+
 # enable post from the future so the theme can show upcoming events
 future: true
 
