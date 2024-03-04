@@ -18,17 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "LIS: Legume Information System"
-subtitle: Information about legume traits for crop improvement
+title: "Legumeinfo Starter Site"
+subtitle: A site demonstrating how to use the Legumeinfo Jekyll theme
 logo: /assets/img/logo.png
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A collaborative, community resource to facilitate crop improvement by integrating
-  genetic, genomic, and trait data across legume species.
+  The Legumeinfo Starter Site is an examle of how to use the Legumeinfo Jekyll
+  theme. It can be forked or simply used as reference for your own site.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: legumefed
-github_username: legumeinfo
+github_username: legumeinfo/jekyll-starter-legumeinfo
 newsletter: http://eepurl.com/cX_JjL
 graphql_uri: https://graphql.lis.ncgr.org/
 
@@ -62,10 +62,10 @@ defaults:
     values:
       layout: "news-item"
 
-# LIS Web Components
+# overrides the version of LIS Web Components that comes with the theme
 web_components_version: 1.4.0
 
-# enable post from the future so the theme can show upcoming events
+# enable posts from the future so the theme can show upcoming events
 future: true
 
 # cause jekyll build to fail on syntax error in YAML front matter
