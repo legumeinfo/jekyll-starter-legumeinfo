@@ -1,5 +1,4 @@
 ---
-layout: event
 title: Multiday Event
 end_date: 2022-06-19
 summary: A demonstration of multiday events.

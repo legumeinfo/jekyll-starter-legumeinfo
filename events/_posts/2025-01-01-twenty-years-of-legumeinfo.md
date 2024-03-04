@@ -1,5 +1,4 @@
 ---
-layout: event
 title: 20 Years of LegumeInfo
 summary: A celebration of the Legume Information System's past, present, and future.
 ---

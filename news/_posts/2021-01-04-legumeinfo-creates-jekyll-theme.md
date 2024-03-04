@@ -1,5 +1,4 @@
 ---
-layout: news-item
 title: Legumeinfo Creates Jekyll Theme
 author: Alan Cleary
 summary: The Legume Information System has created a Jekyll theme. What does it mean?!

@@ -1,5 +1,4 @@
 ---
-layout: blog-post
 title: So, What is Jekyll?
 author: Alan Cleary
 summary: And why should you care?

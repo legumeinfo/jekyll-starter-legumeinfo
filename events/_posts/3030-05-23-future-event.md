@@ -1,5 +1,4 @@
 ---
-layout: event
 title: Future Event
 summary: Fantabulous Extravaganza. It's... instupituous!! Be there.
 ---

@@ -1,5 +1,4 @@
 ---
-layout: blog-post
 title: Example Post
 author: Alan Cleary
 summary: This is the primary example of a blog post and should be used as a reference for creating your own.
