@@ -3,4 +3,4 @@
 - type: "danger"
   message: "<b>Warning!</b> This site is a demonstration. All of its content should be considered fictional."
 - type: "warning"
-  message: "<b>In case you're wondering</b> The Legumeinfo Jekyll theme supports customizing these alerts via a <a href='https://github.com/legumeinfo/jekyll-theme-legumeinfo?tab=readme-ov-file#_data'>data file</a>."
+  message: "<b>In case you're wondering</b> The Legumeinfo Jekyll theme supports customizing these alerts via a <a href='https://github.com/legumeinfo/jekyll-theme-legumeinfo?tab=readme-ov-file#_data' target='_blank'>data file</a>."
