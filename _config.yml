@@ -34,6 +34,8 @@ graphql_uri: https://graphql.lis.ncgr.org/
 
 # Build settings
 theme: jekyll-theme-legumeinfo
+theme_name: "Legumeinfo Jekyll theme"
+theme_link: "<a href='https://github.com/legumeinfo/jekyll-theme-legumeinfo' target='_blank'>Legumeinfo Jekyll theme</a>"
 
 # Site-wide defaults
 defaults:
