@@ -1,0 +1,44 @@
+---
+title: "&lt;lis-pagination-element&gt;"
+web_components: true
+---
+
+<h1>&lt;lis-pagination-element&gt;</h1>
+
+<p>
+  The <code>&lt;lis-pagination-element&gt;</code> component provides a generic pagination element.
+  When the page changes the component emits a custom <code>'pageChange'</code> event containing the new page number.
+  The component will automatically disable the previous button when the <code>page</code> attribute/property is <code>1</code> and the next button is disabled when the component's <code>hasNext</code> attribute/property is <code>false</code> (<code>false</code> by default) or when the <code>page</code> attribute/property is greater than or equal to the optional <code>numPages</code> attribute/property.
+  The component also supports changing the page programmatically via its <code>previous()</code> and <code>next()</code> methods.
+</p>
+
+<p>
+  In this example, an event listener is added to the <code>&lt;lis-pagination-element&gt;</code> component that prints the page number to the Web console when the page changes.
+  The component is available in the Web console via the <code>paginationElement</code> variable.
+  Use this to try changing the page programmatically.
+</p>
+
+<hr>
+
+<!-- the custom pagination element -->
+<lis-pagination-element
+  id="pagination"
+  hasNext=true
+></lis-pagination-element>
+
+<!-- subscribe to pageChange events -->
+<script type="text/javascript">
+  
+  // the pageChanage function given to the LIS pagination Web Component
+  function pageChange(event) {
+    // get the page data
+    console.log(event.detail.page);
+  }
+
+  // get the pagination element
+  const paginationElement = document.getElementById('pagination');
+
+  // subscribe to pageChange events
+  paginationElement.addEventListener("pageChange", pageChange);
+
+</script>

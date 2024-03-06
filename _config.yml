@@ -36,6 +36,10 @@ graphql_uri: https://graphql.lis.ncgr.org/
 theme: jekyll-theme-legumeinfo
 theme_name: "Legumeinfo Jekyll theme"
 theme_link: "<a href='https://github.com/legumeinfo/jekyll-theme-legumeinfo' target='_blank'>Legumeinfo Jekyll theme</a>"
+graphql_name: "Legumeinfo GraphQL server"
+graphql_link: "<a href='https://github.com/legumeinfo/graphql-server' target='_blank'>Legumeinfo GraphQL server</a>"
+webcomponents_name: "@legumeinfo/web-components library"
+webcomponents_link: "<a href='https://github.com/legumeinfo/web-components' target='_blank'>@legumeinfo/web-components library</a>"
 
 # Site-wide defaults
 defaults:
