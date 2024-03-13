@@ -54,7 +54,7 @@ defaults:
       path: "blog/"
       type: "posts"
     values:
-      layout: "blog-item"
+      layout: "blog-post"
   -
     scope:
       path: "events/"
