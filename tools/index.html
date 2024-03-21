@@ -1,58 +1,9 @@
 ---
-layout: default
+layout: tools
 title: Tools
+tools_menu: true
 ---
-<h1>Tools</h1>
 
-{% if site.data.tools %}
-{% assign groups = site.data.tools | group_by: "category" | sort: "name" %}
-{% for group in groups %}
-  <dl>
-    <th>
-      <dt> {{ group.name }} </dt>
-      {% for item in group.items %}
-        <dd><a href="{{ item.url }}">{{ item.name }}</a>: {{ item.description }}</dd>
-      {% endfor %}
-    </th>
-  </dl>
-{% endfor %}
-{% endif %}
+<p>This is the tools page. It lists all of the tools in your site. The {{ site.theme_link }} does not provide a tools page since not every site may want such a page, but a tools <a href="https://jekyllrb.com/docs/layouts/" target="_blank">layout</a> is provided so sites that want a tools page don't necessarily have to implement one from scratch.</p>
 
-<!--
-
-{% if site.data.tools %}
-{% assign groups = site.data.tools | group_by: "category" | sort: "name" %}
-{% for group in groups %}
-<table>
-  <tr>
-    <th>
-      <tr> {{ group.name }} </tr>
-      {% for item in group.items %}
-      <tr>
-        <th><a href="{{ item.url }}">{{ item.name }}</a>: </th>
-        <th>{{ item.description }}</th>
-      </tr>
-      {% endfor %}
-    </th>
-  </tr>
-{% endfor %}
-{% endif %}
--->
-
-<!--
-<div class="tm-sidebar-left uk-visible@m">
-  <h3>Tools</h3>
-  {% if site.data.tools %}
-  {% assign groups = site.data.tools | group_by: "category" | sort: "name" %}
-  {% for group in groups %}
-  <ul class="uk-nav uk-nav-default tm-nav uk-margin-top">
-    <li class="uk-nav-header">{{ group.name }}</li>
-    {% for item in group.items %}
-    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
-    {% endfor %}
-  </ul>
-  {% endfor %}
-  {% endif %}
-</div>
--->
-
+<p>The tools listed on this page are <a href="https://github.com/legumeinfo/jekyll-theme-legumeinfo?tab=readme-ov-file#tools" target="_blank">loaded from a YAML file</a>. The tools menu on the left is not actually specific to this page. The {{ site.theme_name }} supports adding this menu to any page via <a href="https://jekyllrb.com/docs/front-matter/" target="_blank">YAML front matter</a>.</p>

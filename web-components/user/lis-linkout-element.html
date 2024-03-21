@@ -1,0 +1,37 @@
+---
+layout: full-width
+title: "&lt;lis-linkout-element&gt;"
+web_components: true
+---
+
+<div class="uk-container">
+
+  <h1>&lt;lis-linkout-element&gt;</h1>
+
+  <p>
+    The <code>&lt;lis-linkout-element&gt;</code> component provides a generic interface for loading and displaying hyperlinks.
+    In this example, links are loaded for a legume gene from the {{ site.graphql_link }} using JavaScript provided by the {{ site.theme_link }}.
+    A new query can be issued using the <code>linkoutElement.getLinkouts(...)</code> method in the Web console.
+  </p>
+
+  <hr>
+
+  <!-- the custom linkout element -->
+  <lis-linkout-element id="linkouts"></lis-linkout-element>
+
+</div>
+
+<!-- set the linkout function by property because functions can't be set as attributes -->
+<script type="module">
+
+  import { geneLinkoutsFunction } from "lis-graphql";
+
+  const linkoutElement = document.getElementById('linkouts');
+  linkoutElement.linkoutFunction = geneLinkoutsFunction;
+
+  window.onload = (event) => {
+    const queryData = {identifier: "cicar.CDCFrontier.gnm3.ann1.Ca1g000600"};
+    linkoutElement.getLinkouts(queryData);
+  }
+
+</script>

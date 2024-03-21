@@ -18,25 +18,60 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "LIS: Legume Information System"
-subtitle: Information about legume traits for crop improvement
+title: "Legumeinfo Starter Site"
+subtitle: A site demonstrating how to use the Legumeinfo Jekyll theme
 logo: /assets/img/logo.png
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A collaborative, community resource to facilitate crop improvement by integrating
-  genetic, genomic, and trait data across legume species.
+  The Legumeinfo Starter Site is an examle of how to use the Legumeinfo Jekyll
+  theme. It can be forked or simply used as reference for your own site.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: legumefed
-github_username: legumeinfo
+github_username: legumeinfo/jekyll-starter-legumeinfo
 newsletter: http://eepurl.com/cX_JjL
-# Set the LIS Datastore base URL here
-datastoreurl: https://data.legumeinfo.org
+graphql_uri: https://graphql.lis.ncgr.org/
 
 # Build settings
 theme: jekyll-theme-legumeinfo
+theme_name: "Legumeinfo Jekyll theme"
+theme_link: "<a href='https://github.com/legumeinfo/jekyll-theme-legumeinfo' target='_blank'>Legumeinfo Jekyll theme</a>"
+graphql_name: "Legumeinfo GraphQL server"
+graphql_link: "<a href='https://github.com/legumeinfo/graphql-server' target='_blank'>Legumeinfo GraphQL server</a>"
+webcomponents_name: "@legumeinfo/web-components library"
+webcomponents_link: "<a href='https://github.com/legumeinfo/web-components' target='_blank'>@legumeinfo/web-components library</a>"
 
-# enable post from the future so the theme can show upcoming events
+# Site-wide defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "blog/"
+      type: "posts"
+    values:
+      layout: "blog-post"
+  -
+    scope:
+      path: "events/"
+      type: "posts"
+    values:
+      layout: "event"
+  -
+    scope:
+      path: "news/"
+      type: "posts"
+    values:
+      layout: "news-item"
+
+# overrides the version of LIS Web Components that comes with the theme
+web_components_version: 1.4.0
+
+# enable posts from the future so the theme can show upcoming events
 future: true
 
 # cause jekyll build to fail on syntax error in YAML front matter

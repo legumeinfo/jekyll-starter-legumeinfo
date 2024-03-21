@@ -1,0 +1,6 @@
+- type: "primary"
+  message: "<b>Welcome to the legumeinfo Jekyll starter site!</b> The site's code can be found on <a href='https://github.com/legumeinfo/jekyll-starter-legumeinfo' target='_blank'>GitHub</a>. Click the bell (<span uk-icon='bell'></span>) in the navigation bar to toggle this alert."
+- type: "danger"
+  message: "<b>Warning!</b> This site is a demonstration. All of its content should be considered fictional."
+- type: "warning"
+  message: "<b>In case you're wondering</b> The Legumeinfo Jekyll theme supports customizing these alerts via a <a href='https://github.com/legumeinfo/jekyll-theme-legumeinfo?tab=readme-ov-file#_data' target='_blank'>data file</a>."

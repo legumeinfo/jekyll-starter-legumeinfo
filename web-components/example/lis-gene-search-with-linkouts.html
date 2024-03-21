@@ -1,0 +1,67 @@
+---
+layout: full-width
+title: "&lt;lis-gene-search-element&gt; with &lt;lis-linkout-element&gt; and &lt;lis-modal-element&gt;"
+web_components: true
+---
+
+<div class="uk-container uk-margin-bottom">
+
+  <h1>&lt;lis-gene-search-element&gt; with &lt;lis-linkout-element&gt; and &lt;lis-modal-element&gt;</h1>
+
+  <p>
+    In this example, the <a href="../user/lis-gene-search-element.html">&lt;lis-gene-search-element&gt;</a> component is used with the <a href="../core/lis-modal-element.html">&lt;lis-modal-element&gt;</a> component and the <a href="../user/lis-linkout-element.html">&lt;lis-linkout-element&gt;</a> component.
+    Specifically, the names of the genes in the <code>&lt;lis-gene-search-element&gt;</code> component's search results table are links.
+    Clicking on these links will open an instance of the <code>&lt;lis-modal-element&gt;</code> component containing an instance of the <code>&lt;lis-linkout-element&gt;</code> component.
+    The contents of the <code>&lt;lis-linkout-element&gt;</code> component are loaded on-demand when the <code>&lt;lis-modal-element&gt;</code> component is shown.
+    See the source code for details.
+  </p>
+
+  <hr>
+
+</div>
+
+<!-- the custom gene search element -->
+<lis-gene-search-element
+  id="gene-search"
+  identifierExample="Glyma.13G357700"
+  descriptionExample="protein disulfide isomerase-like protein"
+  familyExample="L_HZ6G4Z"
+></lis-gene-search-element>
+
+<lis-modal-element modalId="modal">
+  <lis-linkout-element id="linkouts"></lis-linkout-element>
+</lis-modal-element>
+
+<!-- set the form data and search functions by property because functions can't be set by attribute -->
+<script type="module">
+
+  import {
+    // genes
+    getOrganismsFormDataFunction,
+    geneSearchFunctionFactory,
+    allModalLinksFactory,
+    // linkouts
+    allLinkoutsFunction,
+    // modal
+    modalEventToLinkData
+  } from "lis-graphql";
+
+  const geneSearchElement = document.getElementById('gene-search');
+  geneSearchElement.formDataFunction = getOrganismsFormDataFunction;
+  const seachDataProcessors = allModalLinksFactory('modal');
+  geneSearchElement.searchFunction =
+    geneSearchFunctionFactory(...seachDataProcessors);
+
+  const linkoutElement = document.getElementById('linkouts');
+  linkoutElement.linkoutFunction = allLinkoutsFunction;
+
+  // wait for the modal slot to load before adding an event listener
+  window.onload = (event) => {
+    const modal = document.getElementById('modal');
+    modal.addEventListener('toggle', (event) => {
+      const {type, ...linkoutData} = modalEventToLinkData(event);
+      linkoutElement.getLinkouts({type, linkoutData});
+    });
+  };
+
+</script>

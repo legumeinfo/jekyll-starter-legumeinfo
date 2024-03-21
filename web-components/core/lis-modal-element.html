@@ -1,0 +1,42 @@
+---
+title: "&lt;lis-modal-element&gt;"
+web_components: true
+---
+
+<h1>&lt;lis-modal-element&gt;</h1>
+
+<p>
+  The <code>&lt;lis-modal-element&gt;</code> component provides a generic modal.
+  Specifically, the component is a wrapper for the <a href="https://getuikit.com/docs/modal" target="_blank">UIkit modal</a> and can be interacted with using the UIkit API.
+</p>
+
+<p>
+  In this example, the modal is populated with the <code>&lt;lis-simple-table-element&gt;</code> component.
+  See the source code and documentation for details.
+</p>
+
+<hr>
+
+<a class="uk-button uk-button-default" href="#modal-test" uk-toggle>Open</a>
+
+<lis-modal-element modalId="modal-test" heading="Cheesy Table Modal">
+  <lis-simple-table-element id="table"></lis-simple-table-element>
+</lis-modal-element>
+
+<!--Set all attributes/properties via JavaScript for lis-simple-table-element-->
+<script type="text/javascript">
+  // get the simple table element
+ window.onload = (event) => {
+  const tableElement = document.getElementById('table');
+  // set the element's properties
+  tableElement.caption = 'My cheesy table';
+  tableElement.dataAttributes = ['cheese', 'region'];
+  tableElement.header = {cheese: 'Cheese', region: 'Region'};
+  tableElement.data = [
+    {cheese: 'Brie', region: 'France'},
+    {cheese: 'Burrata', region: 'Italy'},
+    {cheese: 'Feta', region: 'Greece'},
+    {cheese: 'Gouda', region: 'Netherlands'},
+  ];
+ }
+</script>

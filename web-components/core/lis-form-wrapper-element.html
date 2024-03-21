@@ -1,0 +1,73 @@
+---
+title: "&lt;lis-form-wrapper-element&gt;"
+web_components: true
+---
+
+<h1>&lt;lis-form-wrapper-element&gt;</h1>
+
+<p>
+  The <code>&lt;lis-form-wrapper-element&gt;</code> component provides boilerplate functionality for the form it wraps, i.e. the form that's in its slot.
+  Specifically, when the wrapped form is submitted the component prevents the page from reloading and emits a custom <code>'submit'</code> event containing a <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData" target="_blank">FormData</a></code> instance with the contents of the submitted form.
+  The component also provides a <code>submit()</code> method that allows the wrapped form to be submitted programmatically.
+</p>
+
+<p>
+  In this example, the <code>&lt;lis-form-wrapper-element&gt;</code> component wraps a form with a variety of inputs and an event listener is added to the wrapper that prints the <code>FormData</code> instance to the Web console when the form is submitted.
+  The component is available in the Web console via the <code>formElement</code> variable.
+  Use this to try submitting the form programmatically.
+</p>
+
+<hr>
+
+<!-- the custom form wrapper element -->
+<lis-form-wrapper-element id="form-wrapper">
+  <!-- the form that's being wrapped -->
+  <form>
+    <fieldset class="uk-fieldset">
+      <legend class="uk-legend">Legend</legend>
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="Input" aria-label="Input">
+      </div>
+      <div class="uk-margin">
+        <select class="uk-select" aria-label="Select">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+      </div>
+      <div class="uk-margin">
+        <textarea class="uk-textarea" rows="5" placeholder="Textarea" aria-label="Textarea"></textarea>
+      </div>
+      <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <label><input class="uk-radio" type="radio" name="radio2" checked> A</label>
+        <label><input class="uk-radio" type="radio" name="radio2"> B</label>
+      </div>
+      <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <label><input class="uk-checkbox" type="checkbox" checked> A</label>
+        <label><input class="uk-checkbox" type="checkbox"> B</label>
+      </div>
+      <div class="uk-margin">
+        <input class="uk-range" type="range" value="2" min="0" max="10" step="0.1" aria-label="Range">
+      </div>
+    </fieldset>
+    <div class="uk-margin">
+      <button type="submit" class="uk-button uk-button-primary">Search</button>
+    </div>
+  </form>
+</lis-form-wrapper-element>
+
+<!-- get the form data whenever the form is submitted -->
+<script type="text/javascript">
+  
+  // the search function given to the LIS gene search Web Component
+  function submit(event) {
+    // get the form data
+    console.log(event.detail.data);
+  }
+
+  // get the form wrapper element
+  const formElement = document.getElementById('form-wrapper');
+
+  // subscribe to submit events
+  formElement.addEventListener("submit", submit);
+
+</script>

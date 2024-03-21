@@ -1,32 +1,8 @@
 ---
-layout: default
+layout: taxa
 title: Taxa
 ---
-<h1>Taxa</h1>
 
-<h3>Major genera (containing significant crop and model species)</h3>
-{% if site.data.taxon_list %}
-{% assign genera = site.data.taxon_list | group_by: "genus"  %}
-<dt>
-  {% for element in genera %}
-    {% for item in element.items %}
-      {% if item.category == "main" %}
-        <dd><a href="{{ item.genus | downcase }}">{{ item.genus }}</a> {{ item.description }}</dd>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-</dt>
+<p>This is the taxa page. It lists all of the taxa in your site. The {{ site.theme_link }} does not provide a taxa page since not every site may want such a page, but a taxa <a href="https://jekyllrb.com/docs/layouts/" target="_blank">layout</a> is provided so sites that want a taxa page don't necessarily have to implement one from scratch.</p>
 
-<h3>Special-focus genera and data sets</h3>
-<dt>
-  {% for element in genera %}
-    {% for item in element.items %}
-      {% if item.category == "special" %}
-        <dd><a href="{{ item.genus | downcase }}">{{ item.genus }}</a> {{ item.description }}</dd>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-</dt>
-{% endif %}
-
-
+<p>The taxa listed on this page are <a href="https://github.com/legumeinfo/jekyll-theme-legumeinfo?tab=readme-ov-file#taxa" target="_blank">loaded from a YAML file</a>. The {{ site.theme_name }} also generates a page for each species using the Jekyll <a href="https://github.com/avillafiorita/jekyll-datapage_gen" target="_blank">datapage-generator</a> plugin.</p>
