@@ -69,7 +69,7 @@ defaults:
       layout: "news-item"
 
 # overrides the version of LIS Web Components that comes with the theme
-web_components_version: 1.5.0
+web_components_version: 1.6.0
 
 # enable posts from the future so the theme can show upcoming events
 future: true
