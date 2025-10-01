@@ -45,7 +45,14 @@ web_components: true
         return geneLinkoutsFunction(variables, abortSignal);
       }
       if (type == 'symbol') {
-        return geneLinkoutsFunction(variables, abortSignal);
+        const symbolLinkout = `https://mines.dev.lis.ncgr.org/minimine-genefunction/genefunction:${variables.identifier}`;
+        const resultValue = {
+          results: [{
+            href: symbolLinkout,
+            text: symbolLinkout,
+          }]
+        }
+        return Promise.resolve(resultValue);
       }
       return Promise.reject();
     }
