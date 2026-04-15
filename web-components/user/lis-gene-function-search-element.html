@@ -5,81 +5,44 @@ web_components: true
 ---
 
 <div class="uk-container uk-margin-bottom">
-      <h1>&lt;lis-gene-function-search-element&gt;</h1>
-      <p>
-        TODO: Add description here.
-      </p>
-      <p>
-        Optionally, all searches can be limited to a specific genus by setting the <code>genus</code> attribute/property.
-        This will cause the genus field of the search form to be automatically set and disabled so that users cannot change it.
-        Similarly, all searches can be limited to a specific species by setting the <code>species</code> attribute/property in conjunction with the <code>genus</code> attribute/property.
-        You can try setting the <code>genus</code> and <code>species</code> properties in this example using the <code>geneFunctionSearchElement</code> variable in the Web console.
-      </p>
-      <p>
-        Example text for the Gene ID, Traits, Publication ID, and Author fields can be provided by setting the <code>geneIdentifierExample</code>, <code>traitsExample</code>, <code>publicationExample</code>, and <code>authorExample</code> attributes/properties, respectively.
-      </p>
+  <h1>&lt;lis-gene-function-search-element&gt;</h1>
+  <p>
+    TODO: Add description here.
+  </p>
+  <p>
+    Optionally, all searches can be limited to a specific genus by setting the <code>genus</code> attribute/property.
+    This will cause the genus field of the search form to be automatically set and disabled so that users cannot change it.
+    Similarly, all searches can be limited to a specific species by setting the <code>species</code> attribute/property in conjunction with the <code>genus</code> attribute/property.
+    You can try setting the <code>genus</code> and <code>species</code> properties in this example using the <code>geneFunctionSearchElement</code> variable in the Web console.
+  </p>
+  <p>
+    Example text for the Gene ID, Traits, Publication ID, and Author fields can be provided by setting the <code>geneIdentifierExample</code>, <code>traitsExample</code>, <code>publicationExample</code>, and <code>authorExample</code> attributes/properties, respectively.
+  </p>
 
-      <hr>
-    </div>
+  <hr>
+</div>
 
-    <div class="uk-container uk-container-expand">
-      <!-- the custom gene function search element -->
-      <lis-gene-function-search-element id="gene-function-search" geneIdentifierExample="Glyma01g37810, E9, Dt1 FT" traitsExample="flowering, maturity, height" publicationExample="10.1111/jipb.13070 or 33458938" authorExample="Watanabe"></lis-gene-function-search-element>
-      <lis-modal-element modalId="modal">
-        <lis-linkout-element id="linkouts"></lis-linkout-element>
-      </lis-modal-element>
+<div class="uk-container uk-container-expand">
+  <!-- the custom gene function search element -->
+  <lis-gene-function-search-element id="gene-function-search" geneIdentifierExample="Glyma01g37810, E9, Dt1 FT" traitsExample="flowering, maturity, height" publicationExample="10.1111/jipb.13070 or 33458938" authorExample="Watanabe"></lis-gene-function-search-element>
 
-        <!-- set the form data and search functions by property because functions can't be set by attribute -->
+  <!-- set the search function by property because functions can't be set as attributes -->
   <script type="module">
-  
+
     import {
-      // gene functions
       getGeneFunctionFormDataFunction,
       getGeneFunctions,
-      geneLinkoutsFunction,
+      geneFunctionSearchLinkoutsFunction,
     } from "lis-graphql";
 
-    // the linkout function to give to the linkout component
-    function linkoutFunction({type, variables}, {abortSignal}) {
-      if (type == 'gene') {
-        return geneLinkoutsFunction(variables, abortSignal);
-      }
-      if (type == 'symbol') {
-        const symbolLinkout = `https://mines.dev.lis.ncgr.org/minimine-genefunction/genefunction:${variables.identifier}`;
-        const resultValue = {
-          results: [{
-            href: symbolLinkout,
-            text: symbolLinkout,
-          }]
-        }
-        return Promise.resolve(resultValue);
-      }
-      return Promise.reject();
-    }
-  
     const geneFunctionSearchElement = document.getElementById('gene-function-search');
     geneFunctionSearchElement.formDataFunction = getGeneFunctionFormDataFunction;
     geneFunctionSearchElement.searchFunction = getGeneFunctions;
-    const linkoutElement = document.getElementById('linkouts');
-    linkoutElement.linkoutFunction = linkoutFunction;
-
-    // wait for the modal slot to load before adding an event listener
-    window.onload = (event) => {
-      const modal = document.getElementById('modal');
-      modal.addEventListener('toggle', (event) => {
-        const [{$el: link}, ...uikitComponents] = event.detail;
-        const {gene, symbol} = link.dataset;
-        let type = '';
-        let variables = {};
-        if (gene !== undefined) {
-          type = 'gene';
-          variables = {identifier: gene};
-        } else if (symbol !== undefined) {
-          type = 'symbol';
-          variables = {identifier: symbol};
-        }
-        linkoutElement.getLinkouts({type, variables});
-      });
+    geneFunctionSearchElement.linkoutFunction = geneFunctionSearchLinkoutsFunction;
+    geneFunctionSearchElement.linkoutColumns = {
+      geneSymbols: 'symbol',
+      geneModelFullName: 'gene',
     };
+
   </script>
-    </div>
+</div>
