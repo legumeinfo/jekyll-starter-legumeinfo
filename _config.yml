@@ -31,6 +31,7 @@ twitter_username: legumefed
 github_username: legumeinfo/jekyll-starter-legumeinfo
 newsletter: http://eepurl.com/cX_JjL
 graphql_uri: https://graphql.lis.ncgr.org/
+intermine_url: https://mines.dev.lis.ncgr.org/glycinemine
 
 # Build settings
 theme: jekyll-theme-legumeinfo
