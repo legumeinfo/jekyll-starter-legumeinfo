@@ -31,7 +31,6 @@ twitter_username: legumefed
 github_username: legumeinfo/jekyll-starter-legumeinfo
 newsletter: http://eepurl.com/cX_JjL
 graphql_uri: https://graphql.lis.ncgr.org/
-intermine_url: https://mines.dev.lis.ncgr.org/glycinemine
 
 # Build settings
 theme: jekyll-theme-legumeinfo
@@ -70,7 +69,7 @@ defaults:
       layout: "news-item"
 
 # overrides the version of LIS Web Components that comes with the theme
-web_components_version: 1.6.0
+web_components_version: 1.8.1
 
 # enable posts from the future so the theme can show upcoming events
 future: true
